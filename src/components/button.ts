@@ -12,9 +12,7 @@ interface IButtonCtx extends b.IBobrilCtx {
 const Button = b.createComponent<IButton>({
     render(ctx: IButtonCtx, me: b.IBobrilNode) {
         me.tag = "Button";
-        me.attrs = {
-            value : ctx.data.text
-        }
+        me.children = [ctx.data.text]
     },
     onClick(ctx: IButtonCtx): boolean {
         ctx.data.onclick();
