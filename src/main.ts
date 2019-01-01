@@ -22,7 +22,8 @@ export const main = b.createComponent({
                     children : [Header({
                         text: store.header
                     }),Content({
-                        text : store.content
+                        text : store.content,
+                        isEditing : false
                     }),
                 Footer({
                     text: store.footer

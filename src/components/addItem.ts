@@ -22,7 +22,7 @@ const AddItem = b.createComponent<IAddItem>({
         }),
         Input({
             text : "",
-            onchange : (itemName : string) => store.nameOfNewItem = itemName 
+            onchange : (itemName : string) => store.nameOfNewItem = itemName, 
         })]
         
     },
