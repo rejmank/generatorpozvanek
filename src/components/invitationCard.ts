@@ -14,7 +14,12 @@ export const InvitationCard = b.createComponent<IInvitationCardData>({
         me.tag = "div",
         me.children = [{
             tag : "div",
-            children : [ ctx.data.lefPart.map(item => item),]
+            children : [ ctx.data.lefPart.map(item => item),],
+            style: {
+                "backgroundImage" : `url(${b.asset('../assets/tvar.svg')})`,
+                "background-size": "cover",
+                "width" : "120em"
+            }
         },{
             tag: "div",
             children: [ctx.data.rightPart.map(item => item)]

@@ -20,7 +20,7 @@ const Content = b.createComponent<IContent>({
         }) : ctx.data.text],
         me.style = {
             "width" : "100%",
-            "height" : "100%"
+            "height" : "100%",
         }
     },
     onClick(ctx: IContentCtx): boolean {
