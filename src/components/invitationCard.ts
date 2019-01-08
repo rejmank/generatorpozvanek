@@ -14,22 +14,32 @@ export const InvitationCard = b.createComponent<IInvitationCardData>({
         me.tag = "div",
         me.children = [{
             tag : "div",
-            children : [ ctx.data.lefPart.map(item => item),],
+            children : ['Zabal si:', ctx.data.lefPart.map(item => item),],
             style: {
                 "backgroundImage" : `url(${b.asset('../assets/tvar.svg')})`,
-                "background-size": "cover",
-                "width" : "120em"
+                "backgroundSize": "contain",
+                "width" : "40%",
+                "backroundRepeat" : "no-repeat",
+                "textAlign" : "center",
+                "paddingTop" : "1rem",
+                "marginTop" : "1rem",
+                "marginLeft" : "1rem",
+                "marginRight" : "1rem",
+                "marginBottom" : "11rem"
             }
         },{
             tag: "div",
-            children: [ctx.data.rightPart.map(item => item)]
+            children: [ctx.data.rightPart.map(item => item)],
+            style : {
+                "width" : "60%"
+            }
         }
         ],
         me.style = {
             "display" : "flex",
             "boxShadow": "1px 1px 10px",
-            "height" : "35em",
-            "width": "50em",
+            "height" : "37rem",
+            "width": "50rem",
             "padding" : "1px"
         }
     }

@@ -11,7 +11,7 @@ interface IInputCtx extends b.IBobrilCtx {
 
 const Input = b.createComponent<IInput>({
     render(ctx: IInputCtx, me: b.IBobrilNode) {
-        me.tag = "input";
+        me.tag = "textarea";
         me.attrs = {
             value: ctx.data.text
         },

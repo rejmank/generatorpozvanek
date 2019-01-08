@@ -15,10 +15,12 @@ export const Things = b.createComponent<IThings>({
         me.children = [{
             tag: "div",
             children: ctx.data.things.filter(item => item.selected)
-            .map(item => {return {tag: "div", children : [item.name]}})
+            .map(item => {return {tag: "div", children : [item.name]}}),
         }]
         me.style = {
             "display" : "block",
+            "paddingTop" : "2rem",
+            "font-size" : "1.25rem"
         }
     }
 });
