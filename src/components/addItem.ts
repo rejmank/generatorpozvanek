@@ -25,8 +25,8 @@ const AddItem = b.createComponent<IAddItem>({
             onchange : (itemName : string) => store.nameOfNewItem = itemName, 
         })],
         me.style = {
-            "padding-top" : "0.3em",
-            "display" : "flex"
+            "paddingTop" : "0.3em",
+            "display" : "flex",
         }
         
     },

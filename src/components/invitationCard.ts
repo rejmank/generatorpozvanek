@@ -1,4 +1,5 @@
 import * as b from "bobril";
+//import jspdf from 'jspdf';
 
 export interface IInvitationCardData {
     lefPart?: [b.IBobrilNode],

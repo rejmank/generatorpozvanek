@@ -18,7 +18,10 @@ const SelectThing = b.createComponent<ISelectThing>({
             item : item
         })),
        AddItem()  
-    ]
+    ],
+    me.style = {
+        "marginRight" : '1.5rem'
+    }
     }
     
 });

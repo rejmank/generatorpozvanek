@@ -28,10 +28,11 @@ export const main = b.createComponent({
                     text: store.footer
                 })]
                 }]
-            }),editingSection({ content : [  
+            }),editingSection({ leftPart : [  
                 SelectThing({
                     things : store.things
-                }),
+                })],
+            rigthPart : [
                 Header({text: 'Nadpis'}),
                 Input({
                     onchange : (header : string) => store.header =  header,
@@ -49,12 +50,12 @@ export const main = b.createComponent({
                     onchange : (footer : string) => store.footer =  footer,
                     text : store.footer
 
-                })
-            ]})
+                })]})
             
         ],
         me.style = {
-            "display": "flex"
+            "display": "flex",
+            "flexWrap" : "wrap-reverse",
         }
 
     }

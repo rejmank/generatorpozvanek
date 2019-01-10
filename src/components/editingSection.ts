@@ -2,7 +2,8 @@ import * as b from 'bobril';
 
 
 export interface IEditingSection {
-    content?: b.IBobrilNode<any>[],
+    leftPart?: b.IBobrilNode<any>[],
+    rigthPart?: b.IBobrilNode<any>[]
 }
 
 interface IEditingSectionCtx extends b.IBobrilCtx {
@@ -12,10 +13,14 @@ interface IEditingSectionCtx extends b.IBobrilCtx {
 const EditingSection = b.createComponent<IEditingSection>({
     render(ctx: IEditingSectionCtx, me: b.IBobrilNode) {
         me.tag = "div";
-        me.children = ctx.data.content.map(item => item);
+        me.children = [ctx.data.leftPart.map(item => item), {
+            tag : 'div',
+            children : ctx.data.rigthPart.map(item => item)
+        }]
         me.style = {
-            'display' : 'block',
-            'paddingLeft' : '5rem'
+            'display' : 'flex',
+            'paddingLeft' : '5rem',
+            'margin' : '1rem'
         }
     },
 });
