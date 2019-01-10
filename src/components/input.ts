@@ -17,7 +17,8 @@ const Input = b.createComponent<IInput>({
         },
         me.style = {
             'boxSizing' : 'border-box',
-            'height' : 'auto'
+            'height' : 'auto',
+            'display' : 'block',
         }
     },
     onChange(ctx: IInputCtx, newValue: string): void {

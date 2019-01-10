@@ -20,6 +20,7 @@ const SelectThing = b.createComponent<ISelectThing>({
        AddItem()  
     ]
     }
+    
 });
 
-export default SelectThing;
+export default SelectThing; 

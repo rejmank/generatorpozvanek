@@ -20,7 +20,7 @@ export const Things = b.createComponent<IThings>({
         me.style = {
             "display" : "block",
             "paddingTop" : "2rem",
-            "font-size" : "1.25rem"
+            "fontSize" : "1.25rem"
         }
     }
 });
