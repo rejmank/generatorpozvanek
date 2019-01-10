@@ -16,7 +16,8 @@
     "license": "ISC",
     "dependencies": {
         "bobril": "^8.17.0",
-        "bobx": "^0.23.0"
+        "bobx": "^0.23.0",
+        "jspdf": "^1.5.3"
     },
     "devDependencies": {
         "tslint": "^5.12.0"
