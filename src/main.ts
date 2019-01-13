@@ -45,7 +45,7 @@ export const main = b.createComponent({
                     text : store.content
 
                 }),
-                Header({text: 'Padička'}),
+                Header({text: 'Patička'}),
                 Input({
                     onchange : (footer : string) => store.footer =  footer,
                     text : store.footer
