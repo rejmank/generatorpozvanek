@@ -13,12 +13,13 @@ const Input = b.createComponent<IInput>({
     render(ctx: IInputCtx, me: b.IBobrilNode) {
         me.tag = "textarea";
         me.attrs = {
-            value: ctx.data.text
+            value: ctx.data.text,
+            rows : ctx.data.text.length / 60,
+            cols : 58
         },
         me.style = {
-            'boxSizing' : 'border-box',
-            'height' : 'auto',
             'display' : 'block',
+            'width' : '100%',
         }
     },
     onChange(ctx: IInputCtx, newValue: string): void {

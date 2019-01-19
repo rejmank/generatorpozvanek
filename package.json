@@ -16,9 +16,11 @@
     "license": "ISC",
     "dependencies": {
         "bobril": "^8.17.0",
-        "bobx": "^0.23.0"
+        "bobx": "^0.23.0",
+        "showdown": "^1.9.0"
     },
     "devDependencies": {
+        "@types/showdown": "^1.9.2",
         "tslint": "^5.12.0"
     }
 }

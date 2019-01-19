@@ -1,21 +1,22 @@
-import * as b from 'bobril';
+import * as b from "bobril";
 
 export interface IFooter {
-    text: string
+  text: string;
 }
 
 interface IFooterCtx extends b.IBobrilCtx {
-    data : IFooter
+  data: IFooter;
 }
 
 const Footer = b.createComponent<IFooter>({
-    render(ctx: IFooterCtx, me: b.IBobrilNode) {
-        me.tag = "div";
-        me.children = [ctx.data.text]
-        me.style = {
-            "fontSize" : "0.85em"
-        }
-    }
+  render(ctx: IFooterCtx, me: b.IBobrilNode) {
+    me.tag = "div";
+    me.children = [ctx.data.text];
+    me.style = {
+      fontSize: "1.55em",
+      "padding-top": "2rem"
+    };
+  }
 });
 
 export default Footer;

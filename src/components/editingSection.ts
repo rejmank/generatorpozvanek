@@ -15,12 +15,15 @@ const EditingSection = b.createComponent<IEditingSection>({
         me.tag = "div";
         me.children = [ctx.data.leftPart.map(item => item), {
             tag : 'div',
-            children : ctx.data.rigthPart.map(item => item)
+            children : ctx.data.rigthPart.map(item => item),
+            style : {
+                "width" : '100%'
+            }
         }]
         me.style = {
             'display' : 'flex',
-            'paddingLeft' : '5rem',
-            'margin' : '1rem'
+            'margin' : '1rem',
+            'width' : '45rem'
         }
     },
 });

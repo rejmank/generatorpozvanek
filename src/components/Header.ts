@@ -10,10 +10,10 @@ interface IHeaderCtx extends b.IBobrilCtx {
 
 const Header = b.createComponent<IHeader>({
     render(ctx: IHeaderCtx, me: b.IBobrilNode) {
-        me.tag = "h1";
+        me.tag = "h2";
         me.children = [ctx.data.text]
         me.style = {
-            "fontSize" : "1.25em"
+            "fontSize" : "1.8em"
         }
     }
 });
