@@ -14,7 +14,7 @@ const Footer = b.createComponent<IFooter>({
     me.children = [ctx.data.text];
     me.style = {
       fontSize: "1.55em",
-      "padding-top": "2rem"
+      "padding-top": "1rem"
     };
   }
 });

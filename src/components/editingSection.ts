@@ -26,7 +26,8 @@ const EditingSection = b.createComponent<IEditingSection>({
         me.style = {
             'display' : 'flex',
             'margin' : '1rem',
-            'width' : '45rem'
+            'width' : '45rem',
+            'flexWrap' : "wrap"
         }
     },
 });

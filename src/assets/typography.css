@@ -35,6 +35,9 @@ h6 {
 
 @media print {
     #editing {
+        display: none!important;
+    }
+    #header {
         display: none;
     }
     #card {

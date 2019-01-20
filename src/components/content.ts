@@ -21,7 +21,6 @@ const Content = b.createComponent<IContent>({
         me.style = {
             "width" : "100%",
             "height" : "100%",
-            "padding-top" : '1rem'
         }
     },
 

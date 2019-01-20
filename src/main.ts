@@ -15,13 +15,17 @@ export const main = b.createComponent({
     (me.children = [
       {
         tag: "h1",
-        children: ["Generátor pozvánek"]
+        children: ["Generátor pozvánek"],
+        attrs : {
+          id : "header"
+        }
       },
       {
         tag: "div",
         style: {
           display: "flex",
-          flexWrap: "wrap-reverse"
+          flexWrap: "wrap-reverse",
+          alignItems: "flex-end"
         },
         children: [
           invitationCard({
@@ -73,8 +77,7 @@ export const main = b.createComponent({
           })
         ]
       }
-    ]),
-      (me.style = {});
+    ])
   }
 });
 
