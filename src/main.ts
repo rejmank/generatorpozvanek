@@ -8,6 +8,7 @@ import editingSection from "./components/editingSection";
 import { store } from "./store";
 import SelectThing from "./components/slectingThing";
 import Input from "./components/input";
+import Button from './components/button';
 
 export const main = b.createComponent({
   render(_ctx: b.IBobrilCtx, me: b.IBobrilNode): void {
@@ -67,7 +68,7 @@ export const main = b.createComponent({
               Input({
                 onchange: (footer: string) => (store.footer = footer),
                 text: store.footer
-              })
+              }),
             ]
           })
         ]

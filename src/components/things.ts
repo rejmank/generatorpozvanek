@@ -11,21 +11,22 @@ interface IThingsCtx extends b.IBobrilCtx {
 
 export const Things = b.createComponent<IThings>({
   render(ctx: IThingsCtx, me: b.IBobrilNode) {
-    me.tag = "div";
+    me.tag = "text";
     me.children = [
-      {
-        tag: "div",
-        children: ctx.data.things
-          .filter(item => item.selected)
-          .map(item => {
-            return { tag: "h5", children: [item.name], style : {'margin' : "0px"} };
-          })
-      }
+      ctx.data.things.filter(item => item.selected).map((item, i) => {
+        return {
+          tag : "tspan",
+          children : [item.name],
+          attrs : {
+            x : 170,
+            y : 80 + 25 * i
+          }
+        }
+        })
     ];
     me.style = {
-      display: "block",
-      paddingTop: "0.25rem",
-      fontSize: "1.25rem"
+      textAnchor : 'middle',
+      fontSize: "1.55rem"
     };
   }
 });

@@ -1,4 +1,7 @@
 import { observable} from "bobx";
+import * as html2canvas from 'html2canvas';
+
+
 
 export interface thing {
     id : number,
@@ -43,7 +46,7 @@ export class Store {
     },
     {
         id : 5,
-        name : "věci na shůzku",
+        name : "věci na schůzku",
         selected : false
     },
     {
