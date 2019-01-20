@@ -13,7 +13,7 @@ const Header = b.createComponent<IHeader>({
         me.tag = "h2";
         me.children = [ctx.data.text]
         me.style = {
-            "fontSize" : "1.8em"
+            "fontSize" : "1.8em",
         }
     }
 });

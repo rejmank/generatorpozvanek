@@ -32,3 +32,12 @@ h5,
 h6 {
     font-family: skautbold, sans-serif;
 }
+
+@media print {
+    #editing {
+        display: none;
+    }
+    #card {
+        -webkit-print-color-adjust: exact;
+    }
+}

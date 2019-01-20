@@ -2,6 +2,7 @@ import * as b from 'bobril';
 import {Converter} from 'showdown'
 
 let converter = new Converter();
+
 export interface IContent {
     text: string,
 }

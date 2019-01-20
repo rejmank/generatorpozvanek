@@ -13,6 +13,9 @@ interface IEditingSectionCtx extends b.IBobrilCtx {
 const EditingSection = b.createComponent<IEditingSection>({
     render(ctx: IEditingSectionCtx, me: b.IBobrilNode) {
         me.tag = "div";
+        me.attrs = {
+            id : "editing"
+        }
         me.children = [ctx.data.leftPart.map(item => item), {
             tag : 'div',
             children : ctx.data.rigthPart.map(item => item),

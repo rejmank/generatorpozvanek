@@ -9,10 +9,13 @@ export interface thing {
 export class Store {
 
     @observable
-    header : string = "Pozvánka na výpravu";
+    header : string = "Pozvánka na vánoční výpravu";
    
     @observable
-    content : string = "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aliquam id dolor. Sed elit dui, pellentesque a, faucibus vel, interdum nec, diam. Quisque porta. Integer tempor. Curabitur vitae diam non enim vestibulum interdum. Donec iaculis gravida nulla. Aliquam erat volutpat. Vestibulum erat nulla, ullamcorper nec, rutrum non, nonummy ac, erat. Aenean vel massa quis mauris vehicula lacinia. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos hymenaeos. Duis risus. Duis bibendum, lectus ut viverra rhoncus, dolor nunc faucibus libero, eget facilisis enim ipsum id lacus. Vestibulum fermentum tortor id mi. In laoreet, magna id viverra tincidunt, sem odio bibendum justo, vel imperdiet sapien wisi sed libero. Praesent vitae arcu tempor neque lacinia pretium. Aliquam ornare wisi eu metus. Nam sed tellus id magna elementum tincidunt.";
+    content : string = `Ahoj! Vánoce už jsou za dveřmi a my bychom Vás chtěli pozvat navánoční výpravu, která se bude konat **16. 12. - 18. 12.** v klubovně.
+    Sejdeme se **! Na nádraží !** v pátek 16. 12. v 18:15 (v 18:40
+       odjíždí vlak). Je třeba dopravit děti až na nádraží. Vrátíme se v neděli
+       kolem **13:48**`;
    
     @observable
     footer : string = "Těší se na tebe vedoucí";
@@ -26,6 +29,51 @@ export class Store {
     {
         id : 2,
         name : "spacák",
+        selected : false
+    },
+    {
+        id : 3,
+        name : "ešus",
+        selected : false
+    },
+    {
+        id : 4,
+        name : "karimatku",
+        selected : false
+    },
+    {
+        id : 5,
+        name : "věci na shůzku",
+        selected : false
+    },
+    {
+        id : 6,
+        name : "zápisník a tužku",
+        selected : false
+    },
+    {
+        id : 7,
+        name : "kroj",
+        selected : false
+    },
+    {
+        id : 8,
+        name : "hygienu",
+        selected : false
+    },
+    {
+        id : 9,
+        name : "baterku",
+        selected : false
+    },
+    {
+        id : 10,
+        name : "večeři",
+        selected : false
+    },
+    {
+        id : 11,
+        name : "šátek",
         selected : false
     }];
 

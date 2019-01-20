@@ -14,7 +14,7 @@ const Input = b.createComponent<IInput>({
         me.tag = "textarea";
         me.attrs = {
             value: ctx.data.text,
-            rows : ctx.data.text.length / 60,
+            rows : ctx.data.text.length / 30,
             cols : 58
         },
         me.style = {
