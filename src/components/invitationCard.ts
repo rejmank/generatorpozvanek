@@ -27,8 +27,8 @@ export const InvitationCard = b.createComponent<IInvitationCardData>({
                     transform : "scale(0.6)"
                     },
                   style: {
-                    fill: "#afbbd0",
-                    "fill-opacity": "0.74193552"
+                    fill: "#6B96CA",
+                    "fill-opacity": "1"
                   },
                 },
                 {
@@ -49,7 +49,6 @@ export const InvitationCard = b.createComponent<IInvitationCardData>({
             }
           ],
           style: {
-            backgroundSize: "contain",
             width: "50%",
             textAlign: "center",
             paddingTop: "1rem",
@@ -71,6 +70,7 @@ export const InvitationCard = b.createComponent<IInvitationCardData>({
         height: "30rem",
         width: "50rem",
         padding: "1px",
+        backgroundColor: "#A87A93",
       }),
       me.attrs = {
         id : "card",
