@@ -15,10 +15,7 @@ export class Store {
     header : string = "Pozvánka na vánoční výpravu";
    
     @observable
-    content : string = `Ahoj! Vánoce už jsou za dveřmi a my bychom Vás chtěli pozvat navánoční výpravu, která se bude konat **16. 12. - 18. 12.** v klubovně.
-    Sejdeme se **! Na nádraží !** v pátek 16. 12. v 18:15 (v 18:40
-       odjíždí vlak). Je třeba dopravit děti až na nádraží. Vrátíme se v neděli
-       kolem **13:48**`;
+    content : string = `Ahoj! Vánoce už jsou za dveřmi a my bychom Vás chtěli pozvat navánoční výpravu, která se bude konat **16. 12. - 18. 12.** v klubovně. Sejdeme se **! Na nádraží !** v pátek 16. 12. v 18:15 (v 18:40 odjíždí vlak). Je třeba dopravit děti až na nádraží. Vrátíme se v neděli kolem **13:48**`;
    
     @observable
     footer : string = "Těší se na tebe vedoucí";

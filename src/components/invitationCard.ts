@@ -27,7 +27,7 @@ export const InvitationCard = b.createComponent<IInvitationCardData>({
                     transform : "scale(0.6)"
                     },
                   style: {
-                    fill: "#6B96CA",
+                    fill: "#FFCC00",
                     "fill-opacity": "1"
                   },
                 },
@@ -36,7 +36,7 @@ export const InvitationCard = b.createComponent<IInvitationCardData>({
                   children: ["Zabal si:"],
                   style: {
                     fontFamily : "skautbold", 
-                    fontSize : "1.8em"
+                    fontSize : "1.8em",
                   },
                   attrs : {
                     x : "90",
@@ -60,7 +60,7 @@ export const InvitationCard = b.createComponent<IInvitationCardData>({
           children: [ctx.data.rightPart.map(item => item)],
           style: {
             width: "50%",
-            margin : "1rem"
+            margin : "1rem",
           }
         }
       ]),
@@ -70,7 +70,6 @@ export const InvitationCard = b.createComponent<IInvitationCardData>({
         height: "30rem",
         width: "50rem",
         padding: "1px",
-        backgroundColor: "#A87A93",
       }),
       me.attrs = {
         id : "card",
