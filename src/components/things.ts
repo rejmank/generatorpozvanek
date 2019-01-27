@@ -18,15 +18,15 @@ export const Things = b.createComponent<IThings>({
           tag : "tspan",
           children : [item.name],
           attrs : {
-            x : 170,
-            y : 80 + 25 * i
+            x : 280,
+            y : 130 + 40 * i
           }
         }
         })
     ];
     me.style = {
       textAnchor : 'middle',
-      fontSize: "1.55rem"
+      fontSize: "2.2rem"
     };
   }
 });

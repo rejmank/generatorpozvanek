@@ -8,7 +8,8 @@ import editingSection from "./components/editingSection";
 import { store } from "./store";
 import SelectThing from "./components/slectingThing";
 import Input from "./components/input";
-import Button from './components/button';
+
+let isPrint = false;
 
 export const main = b.createComponent({
   render(_ctx: b.IBobrilCtx, me: b.IBobrilNode): void {
@@ -27,7 +28,7 @@ export const main = b.createComponent({
           flexWrap: "wrap-reverse",
           alignItems: "flex-end"
         },
-        children: [
+        children: [ 
           invitationCard({
             lefPart: [
               Things({
@@ -51,6 +52,7 @@ export const main = b.createComponent({
               }
             ]
           }),
+
           editingSection({
             leftPart: [
               SelectThing({
@@ -80,5 +82,19 @@ export const main = b.createComponent({
     ])
   }
 });
+
+window.onbeforeprint = function() {
+  console.log('onBefore');
+  isPrint = true;
+}
+
+window.print = function() {
+  console.log('onBefore');
+  isPrint = true;
+}
+
+window.onafterprint = function() {
+  isPrint = false;
+}
 
 export default main;
