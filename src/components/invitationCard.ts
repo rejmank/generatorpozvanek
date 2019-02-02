@@ -74,10 +74,8 @@ export const InvitationCard = b.createComponent<IInvitationCardData>({
       (me.style = {
         display: "flex",
         boxShadow: "1px 1px 10px",
-        height: "400px",
-        minHeight : "400px",
-        minWidth : "650px",
-        width: "650px",
+        height: window.innerWidth > 650 ? "400px" : window.innerWidth * (400/650) + 'px',
+        width: window.innerWidth > 650 ? "650px" : window.innerWidth -10  + 'px',
         padding: "1px",
         backgroundColor : '#FFCC00'
       }),

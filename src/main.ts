@@ -13,12 +13,12 @@ let isPrint = false;
 
 export const main = b.createComponent({
   render(_ctx: b.IBobrilCtx, me: b.IBobrilNode): void {
-    (me.children = [
+    me.children = [
       {
         tag: "h1",
         children: ["Generátor pozvánek"],
-        attrs : {
-          id : "header"
+        attrs: {
+          id: "header"
         }
       },
       {
@@ -28,7 +28,7 @@ export const main = b.createComponent({
           flexWrap: "wrap-reverse",
           alignItems: "flex-end"
         },
-        children: [ 
+        children: [
           invitationCard({
             lefPart: [
               Things({
@@ -52,6 +52,40 @@ export const main = b.createComponent({
               }
             ]
           }),
+          {
+            tag: "div",
+            children: [
+              invitationCard({
+                lefPart: [
+                  Things({
+                    things: store.things
+                  })
+                ],
+                rightPart: [
+                  {
+                    tag: "div",
+                    children: [
+                      Header({
+                        text: store.header
+                      }),
+                      Content({
+                        text: store.content
+                      }),
+                      Footer({
+                        text: store.footer
+                      })
+                    ]
+                  }
+                ]
+              })
+            ],
+            attrs: {
+              id: "onlyForPring"
+            },
+            style: {
+              display: "none"
+            }
+          },
 
           editingSection({
             leftPart: [
@@ -74,27 +108,27 @@ export const main = b.createComponent({
               Input({
                 onchange: (footer: string) => (store.footer = footer),
                 text: store.footer
-              }),
+              })
             ]
           })
         ]
       }
-    ])
+    ];
   }
 });
 
 window.onbeforeprint = function() {
-  console.log('onBefore');
+  console.log("onBefore");
   isPrint = true;
-}
+};
 
 window.print = function() {
-  console.log('onBefore');
+  console.log("onBefore");
   isPrint = true;
-}
+};
 
 window.onafterprint = function() {
   isPrint = false;
-}
+};
 
 export default main;
