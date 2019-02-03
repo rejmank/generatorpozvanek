@@ -9,8 +9,6 @@ import { store } from "./store";
 import SelectThing from "./components/slectingThing";
 import Input from "./components/input";
 
-let isPrint = false;
-
 export const main = b.createComponent({
   render(_ctx: b.IBobrilCtx, me: b.IBobrilNode): void {
     me.children = [
@@ -53,6 +51,7 @@ export const main = b.createComponent({
             ]
           }),
           {
+            // div with default diplay:none on its class, displays while print
             tag: "div",
             children: [
               invitationCard({
@@ -116,19 +115,5 @@ export const main = b.createComponent({
     ];
   }
 });
-
-window.onbeforeprint = function() {
-  console.log("onBefore");
-  isPrint = true;
-};
-
-window.print = function() {
-  console.log("onBefore");
-  isPrint = true;
-};
-
-window.onafterprint = function() {
-  isPrint = false;
-};
 
 export default main;
