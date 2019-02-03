@@ -8,17 +8,12 @@ import editingSection from "./components/editingSection";
 import { store } from "./store";
 import SelectThing from "./components/slectingThing";
 import Input from "./components/input";
+import Heading from './components/Heading';
 
 export const main = b.createComponent({
   render(_ctx: b.IBobrilCtx, me: b.IBobrilNode): void {
     me.children = [
-      {
-        tag: "h1",
-        children: ["Generátor pozvánek"],
-        attrs: {
-          id: "header"
-        }
-      },
+     Heading(),
       {
         tag: "div",
         style: {
