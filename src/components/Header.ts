@@ -1,7 +1,8 @@
 import * as b from 'bobril';
 
 export interface IHeader {
-    text: string
+    text: string,
+    fontSize? : string,
 }
 
 interface IHeaderCtx extends b.IBobrilCtx {
@@ -13,7 +14,7 @@ const Header = b.createComponent<IHeader>({
         me.tag = "h2";
         me.children = [ctx.data.text]
         me.style = {
-            "fontSize" : "1.8em",
+            "fontSize" : ctx.data.fontSize ? ctx.data.fontSize : `1.8em`,
         }
     }
 });

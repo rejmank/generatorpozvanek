@@ -4,7 +4,8 @@ import {Converter} from 'showdown'
 let converter = new Converter();
 
 export interface IContent {
-    text: string,
+    text : string,
+    fontSize? : string
 }
 
 interface IContentCtx extends b.IBobrilCtx {
@@ -21,6 +22,7 @@ const Content = b.createComponent<IContent>({
         me.style = {
             "width" : "100%",
             "height" : "100%",
+            "fontSize" : ctx.data.fontSize ? ctx.data.fontSize : "1em"
         }
     },
 

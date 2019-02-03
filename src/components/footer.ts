@@ -2,6 +2,7 @@ import * as b from "bobril";
 
 export interface IFooter {
   text: string;
+  fontSize? : string;
 }
 
 interface IFooterCtx extends b.IBobrilCtx {
@@ -13,7 +14,7 @@ const Footer = b.createComponent<IFooter>({
     me.tag = "div";
     me.children = [ctx.data.text];
     me.style = {
-      fontSize: "1.55em",
+      fontSize: ctx.data.fontSize ? ctx.data.fontSize : "1.55em",
       "padding-top": "1rem"
     };
   }
