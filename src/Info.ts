@@ -15,9 +15,6 @@ const Info = b.createComponent({
             . Pokud máš nějaké další dotazy neváhej mi napsat na j.rejman@protonmail.com
             Koumal`
             ]
-        me.style = {
-            "fontSize" : ctx.data.fontSize ? ctx.data.fontSize : `1.8em`,
-        }
     }
 });
 

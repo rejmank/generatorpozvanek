@@ -19,7 +19,7 @@ const Heading = b.createComponent({
             paddingRight: "0.5rem"
           }
         },
-        to: "info"
+        to: "/info"
       })
     ];
     me.style = {

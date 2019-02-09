@@ -13,7 +13,7 @@ interface ILinkCtx extends b.IBobrilCtx {
 export const Link = b.createComponent<ILink>({
   render(ctx: ILinkCtx, me: b.IBobrilNode) {
     me.children = [
-      ctx.data.component
+      ctx.data.component,
     ]; 
   }, 
   onClick(ctx: ILinkCtx, me: b.IBobrilNode) {
