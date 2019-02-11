@@ -34,13 +34,13 @@ export const InvitationCard = b.createComponent<IInvitationCardData>({
                      height : "100%"
                     },
                   style: {
-                     fill: "#ffffff",
+                     fill: "#fff5fb",
                     "fillOpacity": "1"
                   },
                 },
                 {
                   tag: "text",
-                  children: ["Zabal si:"],
+                  children: ["Zabal si"],
                   style: {
                     fontFamily : "skautbold", 
                     fontSize : "4em",
@@ -48,6 +48,17 @@ export const InvitationCard = b.createComponent<IInvitationCardData>({
                   attrs : {
                     x : "140",
                     y : "90"
+                  },
+                }, {
+                  tag: "text",
+                  children: ["s sebou: "],
+                  style: {
+                    fontFamily : "skautbold", 
+                    fontSize : "4em",
+                  },
+                  attrs : {
+                    x : "140",
+                    y : "150"
                   },
                 },
                 ,
@@ -77,7 +88,7 @@ export const InvitationCard = b.createComponent<IInvitationCardData>({
         height: window.innerWidth > 650 ? "400px" : window.innerWidth * (400/650) + 'px',
         width: window.innerWidth > 650 ? "650px" : window.innerWidth -10  + 'px',
         padding: "1px",
-        backgroundColor : '#FFCC00'
+        backgroundColor : ''
       }),
       me.attrs = {
         id : "card",

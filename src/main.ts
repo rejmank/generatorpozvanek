@@ -19,7 +19,9 @@ export const main = b.createComponent({
         style: {
           display: "flex",
           flexWrap: "wrap-reverse",
-          alignItems: "flex-end"
+          alignItems: "flex-end",
+          paddingLeft : "1em",
+          paddingRight : "1em"
         },
         children: [
           invitationCard({

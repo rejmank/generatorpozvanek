@@ -19,13 +19,13 @@ export const Things = b.createComponent<IThings>({
           children : [item.name],
           attrs : {
             x : 280,
-            y : 130 + 40 * i
+            y : 210 + 60 * i
           }
         }
         })
     ];
     me.style = {
-      textAnchor : 'middle',
+      textAnchor : 'rigth',
       fontSize: "2.2rem"
     };
   }
