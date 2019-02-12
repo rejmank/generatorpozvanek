@@ -22,7 +22,7 @@ export const SelectableThing = b.createComponent<ISelectableThingData>({
            }
         },{
             tag: "div",
-            children: [ctx.data.item.name.slice(1, ctx.data.item.name.length)]
+            children: [ctx.data.item.name]
         }
         ],
         me.style = {

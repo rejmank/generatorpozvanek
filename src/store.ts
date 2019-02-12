@@ -20,57 +20,57 @@ export class Store {
     @observable
     things : thing[] = [{
         id : 1,
-        name : "☐ přezuvky",
+        name : "přezuvky",
         selected : true
     },
     {
         id : 2,
-        name : "☐ spacák",
+        name : "spacák",
         selected : false
     },
     {
         id : 3,
-        name : "☐ ešus",
+        name : "ešus",
         selected : false
     },
     {
         id : 4,
-        name : "☐ karimatku",
+        name : "karimatku",
         selected : false
     },
     {
         id : 5,
-        name : "☐ věci na schůzku",
+        name : "věci na schůzku",
         selected : false
     },
     {
         id : 6,
-        name : "☐ zápisník a tužku",
+        name : "zápisník a tužku",
         selected : false
     },
     {
         id : 7,
-        name : "☐ kroj",
+        name : "kroj",
         selected : false
     },
     {
         id : 8,
-        name : "☐ hygienu",
+        name : "hygienu",
         selected : false
     },
     {
         id : 9,
-        name : "☐ baterku",
+        name : "baterku",
         selected : false
     },
     {
         id : 10,
-        name : "☐ večeři",
+        name : "večeři",
         selected : false
     },
     {
         id : 11,
-        name : "☐ šátek",
+        name : "šátek",
         selected : false
     }];
 
@@ -80,7 +80,7 @@ export class Store {
     addThing(thingName : string): void {
         this.things = [...this.things, {
             id : this.things[this.things.length -1 ].id + 1,
-            name : "☐" + thingName,
+            name : thingName,
             selected : true
         }]
     }
