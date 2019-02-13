@@ -1,5 +1,5 @@
 import * as b from "bobril";
-import Header from "./Header";
+import Shape from './shape';
 
 export interface IInvitationCardData {
   lefPart?: [b.IBobrilNode];
@@ -22,32 +22,12 @@ export const InvitationCard = b.createComponent<IInvitationCardData>({
             margin: "1rem"
           }
         },
-        {
-          tag: "div",
-          children: [
-            {
-              tag: "div",
-              children: [
-                Header({
-                  text: "Zabal si s sebou:"
-                })
-              ],
-              style : {
-                textAlign : 'center',
-                marginLeft: '25%',
-                marginRight : '25%'
-              }
-            },
-            ctx.data.lefPart.map(item => item)
-          ],
-          style: {
-            backgroundImage: `url(${b.asset("../assets/tvar.svg")})`,
-            backgroundSize: "contain",
-            backgroundRepeat: "no-repeat",
-            width: "50%",
-            padding: "1rem"
-          }
-        }
+         
+        Shape({
+         headerText : "zabal si s sebou:",
+         items : ctx.data.lefPart 
+        })
+     
       ]),
       (me.style = {
         display: "flex",
@@ -58,7 +38,7 @@ export const InvitationCard = b.createComponent<IInvitationCardData>({
             : window.innerWidth * (400 / 650) + "px",
         width:
           window.innerWidth > 650 ? "650px" : window.innerWidth - 10 + "px",
-        padding: "1px",
+        padding: "1rem",
         backgroundColor: ""
       }),
       (me.attrs = {

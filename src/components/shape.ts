@@ -1,56 +1,43 @@
 import * as b from "bobril";
+import Header from './Header';
 
-export interface IInvitationCardData {
-  content?: string | number;
-  path: string;
+export interface IShapeData {
+  headerText: string,
+  items: [b.IBobrilNode]
 }
 
-interface IInvitationCardCtx extends b.IBobrilCtx {
-  data: IInvitationCardData;
+interface IShapeCtx extends b.IBobrilCtx {
+  data: IShapeData;
 }
 
-export const InvitationCard = b.createComponent<IInvitationCardData>({
-  render(ctx: IInvitationCardCtx, me: b.IBobrilNode) {
-    (me.tag = "svg"),
-      (me.attrs = {
-        width: "90%",
-        heigth: "90%",
-        viewBox: "0 0 600 800"
-      }),
-      (me.children = [
+export const Shape = b.createComponent<IShapeData>({
+  render(ctx: IShapeCtx, me: b.IBobrilNode) {
+    
+      me.tag = "div",
+      me.children = [
         {
-          tag: "g",
+          tag: "div",
           children: [
-            {
-              tag: "path",
-              attrs: {
-                d: ctx.data.path,
-
-                //transform : `scale(0.6)`,
-                width: "100%",
-                height: "100%"
-              },
-              style: {
-                fill: "#ffffff",
-                fillOpacity: "1"
-              }
-            },
-            {
-              tag: "text",
-              children: ["Zabal si:"],
-              style: {
-                fontFamily: "skautbold",
-                fontSize: "4em"
-              },
-              attrs: {
-                x: "140",
-                y: "90"
-              }
-            }
-          ]
-        }
-      ]);
-  }
+            Header({
+              text: "Zabal si s sebou:"
+            })
+          ],
+          style : {
+            textAlign : 'center',
+            marginLeft: '25%',
+            marginRight : '25%'
+          }
+        },
+        ctx.data.items.map(item => item)
+      ],
+      me.style = {
+        backgroundImage: `url(${b.asset("../assets/tvar.svg")})`,
+        backgroundSize: "contain",
+        backgroundRepeat: "no-repeat",
+        width: "50%",
+        padding: "1rem"
+      }
+    }
 });
 
-export default InvitationCard;
+export default Shape;

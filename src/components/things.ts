@@ -39,7 +39,8 @@ export const Things = b.createComponent<IThings>({
       flexDirection: "column",
       flexWrap: "wrap",
       maxHeight: "70%",
-      justifyContent: "space-between"
+      justifyContent: "space-between",
+      margin : '1rem'
     };
   }
 });
