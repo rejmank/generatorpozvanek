@@ -30,6 +30,9 @@ const Heading = b.createComponent({
       paddingLeft: "0.3rem",
       boxShadow: "0px 2px 5px 0px rgba(0,0,0,0.75)"
     };
+    me.attrs = {
+      id : "header"
+    }
   }
 });
 

@@ -39,22 +39,21 @@ h6 {
         display: none!important;
     }
     #header {
-        display: none;
+        display: none!important;
     }
     #card {
         -webkit-print-color-adjust: exact;
-        width: 650px!important;
-        height: 400px!important;
+        width: 170mm!important;
+        height: 120mm!important;
         box-shadow: none!important;
-        border: solid 1px black!important;
+        border: 1px solid black;
     }
     #onlyForPring {
         display: block!important;
-        margin-top: 25px!important;
-        box-shadow: none!important;
-        border: solid 1px black!important;
-        -webkit-print-color-adjust: exact;
-        width: 650px!important;
-        height: 400px!important;
+        padding: 0!important;
+        margin: 0!important;
+    }
+    #print-container {
+        display: block!important;
     }
 }

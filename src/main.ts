@@ -65,15 +65,18 @@ export const main = b.createComponent({
                     tag: "div",
                     children: [
                       Header({
-                        text: store.header
+                        text: store.header,
+                        fontSize : window.innerWidth > 650 ? "1.8em" : `${window.innerWidth * (1.8/655)}em`
                       }),
                       Content({
-                        text: store.content
+                        text: store.content,
+                        fontSize : window.innerWidth > 650 ? "1em" : `${window.innerWidth * (1/655)}em`
                       }),
                       Footer({
-                        text: store.footer
+                        text: store.footer,
+                        fontSize : window.innerWidth > 650 ? "1.55em" : `${window.innerWidth * (1.55/655)}em`
                       })
-                    ]
+                    ],
                   }
                 ]
               })
@@ -110,8 +113,12 @@ export const main = b.createComponent({
               })
             ]
           })
-        ]
-      }
+        ],
+        attrs : {
+          id : "print-container" 
+         }
+      },
+      
     ];
   }
 });

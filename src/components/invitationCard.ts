@@ -43,7 +43,6 @@ export const InvitationCard = b.createComponent<IInvitationCardData>({
       }),
       (me.attrs = {
         id: "card",
-        class: "card"
       });
   }
 });
