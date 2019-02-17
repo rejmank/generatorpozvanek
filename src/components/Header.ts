@@ -15,6 +15,9 @@ const Header = b.createComponent<IHeader>({
         me.children = [ctx.data.text]
         me.style = {
             "fontSize" : ctx.data.fontSize ? ctx.data.fontSize : `1.8em`,
+            marginTop: '0.5rem',
+            marginBottom: '0.5rem',
+            color: '#5a2591'
         }
     }
 });

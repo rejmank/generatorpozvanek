@@ -36,16 +36,28 @@ export const main = b.createComponent({
                 children: [
                   Header({
                     text: store.header,
-                    fontSize : window.innerWidth > 650 ? "1.8em" : `${window.innerWidth * (1.8/655)}em`
+                    fontSize : window.innerWidth > 650 ? "1.1em" : `${window.innerWidth * (1.1/655)}em`
                   }),
                   Content({
                     text: store.content,
-                    fontSize : window.innerWidth > 650 ? "1em" : `${window.innerWidth * (1/655)}em`
+                    fontSize : window.innerWidth > 650 ? "0.7em" : `${window.innerWidth * (0.7/655)}em`
                   }),
                   Footer({
                     text: store.footer,
-                    fontSize : window.innerWidth > 650 ? "1.55em" : `${window.innerWidth * (1.55/655)}em`
-                  })
+                    fontSize : window.innerWidth > 650 ? "1em" : `${window.innerWidth * (1/655)}em`
+                  }),
+                  {
+                    tag : "img",
+                    attrs: {
+                      src: b.asset('./assets/SKAUT_logo.jpg') ,
+                    },
+                    style: {
+                      height: '80px',
+                      position: 'absolute',
+                      left: '0',
+                      bottom: '15px'
+                    }
+                  }
                 ]
               }
             ]
@@ -66,17 +78,29 @@ export const main = b.createComponent({
                     children: [
                       Header({
                         text: store.header,
-                        fontSize : window.innerWidth > 650 ? "1.8em" : `${window.innerWidth * (1.8/655)}em`
+                        fontSize : window.innerWidth > 650 ? "1.1em" : `${window.innerWidth * (1.1/655)}em`
                       }),
                       Content({
                         text: store.content,
-                        fontSize : window.innerWidth > 650 ? "1em" : `${window.innerWidth * (1/655)}em`
+                        fontSize : window.innerWidth > 650 ? "0.7em" : `${window.innerWidth * (0.7/655)}em`
                       }),
                       Footer({
                         text: store.footer,
-                        fontSize : window.innerWidth > 650 ? "1.55em" : `${window.innerWidth * (1.55/655)}em`
-                      })
-                    ],
+                        fontSize : window.innerWidth > 650 ? "1em" : `${window.innerWidth * (1/655)}em`
+                      }),
+                      {
+                        tag : "img",
+                        attrs: {
+                          src: b.asset('./assets/SKAUT_logo.jpg') ,
+                        },
+                        style: {
+                          height: '80px',
+                          position: 'absolute',
+                          left: '0',
+                          bottom: '15px'
+                        }
+                      }
+                    ]
                   }
                 ]
               })

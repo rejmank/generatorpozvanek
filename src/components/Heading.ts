@@ -14,7 +14,6 @@ const Heading = b.createComponent({
       Link({
         component: {
           tag: "h1",
-          children: ["Info"],
           style: {
             paddingRight: "0.5rem"
           }

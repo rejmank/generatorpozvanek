@@ -19,7 +19,8 @@ export const Shape = b.createComponent<IShapeData>({
           tag: "div",
           children: [
             Header({
-              text: "Zabal si s sebou:"
+              text: "Zabal si s sebou:",
+              fontSize: '1.1rem'
             })
           ],
           style : {
@@ -34,8 +35,9 @@ export const Shape = b.createComponent<IShapeData>({
         backgroundImage: `url(${b.asset("../assets/tvar.svg")})`,
         backgroundSize: "contain",
         backgroundRepeat: "no-repeat",
-        width: "50%",
-        padding: "1rem"
+        width: "45%",
+        padding: "1rem",
+        marginTop: '1rem'
       }
     }
 });

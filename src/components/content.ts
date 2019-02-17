@@ -22,7 +22,8 @@ const Content = b.createComponent<IContent>({
         me.style = {
             "width" : "100%",
             "height" : "100%",
-            "fontSize" : ctx.data.fontSize ? ctx.data.fontSize : "1em"
+            "fontSize" : ctx.data.fontSize ? ctx.data.fontSize : "1em",
+            color: '#9a158f'
         }
     },
 

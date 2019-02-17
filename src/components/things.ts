@@ -28,7 +28,8 @@ export const Things = b.createComponent<IThings>({
             ],
             style: {
               maxWidth: "50%",
-              display: "flex"
+              display: "flex",
+              color: '#9a158f'
             }
           };
         })
@@ -38,9 +39,11 @@ export const Things = b.createComponent<IThings>({
       display: "flex",
       flexDirection: "column",
       flexWrap: "wrap",
-      maxHeight: "70%",
+      maxHeight: "68%",
       justifyContent: "space-between",
-      margin : '1rem'
+      marginBottom: "1.25rem",
+      marginLeft: "1rem",
+      marginRight: "1rem"
     };
   }
 });
