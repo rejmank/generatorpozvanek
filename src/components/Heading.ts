@@ -23,7 +23,6 @@ const Heading = b.createComponent({
     ];
     me.style = {
       display: "flex",
-      heigth: "2rem",
       justifyContent: "space-between",
       marginBottom: "2rem",
       paddingLeft: "0.3rem",
