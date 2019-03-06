@@ -5,7 +5,8 @@ let converter = new Converter();
 
 export interface IContent {
     text : string,
-    fontSize? : string
+    fontSize? : string,
+    color?: string,
 }
 
 interface IContentCtx extends b.IBobrilCtx {
@@ -23,7 +24,7 @@ const Content = b.createComponent<IContent>({
             "width" : "100%",
             "height" : "100%",
             "fontSize" : ctx.data.fontSize ? ctx.data.fontSize : "1em",
-            color: '#9a158f'
+            color:  ctx.data.color ?  ctx.data.color : '#000'
         }
     },
 

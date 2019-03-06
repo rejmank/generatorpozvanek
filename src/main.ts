@@ -6,9 +6,10 @@ import Header from "./components/Header";
 import Footer from "./components/footer";
 import editingSection from "./components/editingSection";
 import { store } from "./store";
-import SelectThing from "./components/slectingThing";
+import SelectThing from './components/slectingThing';
 import Input from "./components/input";
 import Heading from './components/Heading';
+import toggle from './components/toggle';
 
 export const main = b.createComponent({
   render(_ctx: b.IBobrilCtx, me: b.IBobrilNode): void {
@@ -36,15 +37,18 @@ export const main = b.createComponent({
                 children: [
                   Header({
                     text: store.header,
-                    fontSize : window.innerWidth > 650 ? "1.2em" : `${window.innerWidth * (1.2/655)}em`
+                    fontSize : window.innerWidth > 650 ? "1.2em" : `${window.innerWidth * (1.2/655)}em`,
+                    color: store.bwMode ? "#2d2d30" : '#5a2591'
                   }),
                   Content({
                     text: store.content,
-                    fontSize : window.innerWidth > 650 ? "0.9em" : `${window.innerWidth * (0.9/655)}em`
+                    fontSize : window.innerWidth > 650 ? "0.9em" : `${window.innerWidth * (0.9/655)}em`,
+                    color: store.bwMode ? '#535355' : "#9a158f"
                   }),
                   Footer({
                     text: store.footer,
-                    fontSize : window.innerWidth > 650 ? "1em" : `${window.innerWidth * (0.95/655)}em`
+                    fontSize : window.innerWidth > 650 ? "1em" : `${window.innerWidth * (0.95/655)}em`,
+                    color: store.bwMode ? '#535355' : "#9a158f"
                   }),
                   {
                     tag : "img",
@@ -136,7 +140,16 @@ export const main = b.createComponent({
               Input({
                 onchange: (footer: string) => (store.footer = footer),
                 text: store.footer
-              })
+              }), 
+             toggle({
+               state: store.bwMode,
+               thumbnail: "Přepnout do čeno bílé",
+               toToggle: () => {
+                 store.bwMode = !store.bwMode;
+                 console.log(store.bwMode);
+                 b.invalidate();
+               }
+             })
             ]
           })
         ],

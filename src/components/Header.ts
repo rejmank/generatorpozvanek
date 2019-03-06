@@ -3,6 +3,7 @@ import * as b from 'bobril';
 export interface IHeader {
     text: string,
     fontSize? : string,
+    color? : string
 }
 
 interface IHeaderCtx extends b.IBobrilCtx {
@@ -17,7 +18,7 @@ const Header = b.createComponent<IHeader>({
             "fontSize" : ctx.data.fontSize ? ctx.data.fontSize : `1.8em`,
             marginTop: '0.5rem',
             marginBottom: '0.5rem',
-            color: '#5a2591'
+            color: ctx.data.color ?  ctx.data.color : '#000'
         }
     }
 });

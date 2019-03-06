@@ -20,7 +20,8 @@ export const Shape = b.createComponent<IShapeData>({
           children: [
             Header({
               text: "Zabal si s sebou:",
-              fontSize: '1.1rem'
+              fontSize: '1.1rem',
+              color: 'rgb(90, 37, 145)'
             })
           ],
           style : {

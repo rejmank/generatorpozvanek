@@ -77,6 +77,9 @@ export class Store {
     @observable
     nameOfNewItem : string = "";
 
+    @observable
+    bwMode : boolean = false;
+
     addThing(thingName : string): void {
         this.things = [...this.things, {
             id : this.things[this.things.length -1 ].id + 1,

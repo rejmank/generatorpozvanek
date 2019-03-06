@@ -3,6 +3,7 @@ import * as b from "bobril";
 export interface IFooter {
   text: string;
   fontSize? : string;
+  color? : string;
 }
 
 interface IFooterCtx extends b.IBobrilCtx {
@@ -15,7 +16,7 @@ const Footer = b.createComponent<IFooter>({
     me.children = [ctx.data.text];
     me.style = {
       fontSize: ctx.data.fontSize ? ctx.data.fontSize : "1em",
-      color: '#9a158f',
+      color:  ctx.data.color ?  ctx.data.color : '#000',
       fontStyle: 'italic'
     };
   }
