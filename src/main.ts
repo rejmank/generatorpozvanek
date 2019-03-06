@@ -28,7 +28,8 @@ export const main = b.createComponent({
           invitationCard({
             lefPart: [
               Things({
-                things: store.things
+                things: store.things, 
+                color: store.bwMode ? '#535355' : "#9a158f"
               })
             ],
             rightPart: [
@@ -53,7 +54,7 @@ export const main = b.createComponent({
                   {
                     tag : "img",
                     attrs: {
-                      src: b.asset('./assets/SKAUT_Logo.svg') ,
+                      src: store.bwMode ? b.asset('./assets/SKAUT_Logobw.svg') : b.asset('./assets/SKAUT_Logo.svg') ,
                     },
                     style: {
                       height: '15%',
@@ -74,7 +75,8 @@ export const main = b.createComponent({
               invitationCard({
                 lefPart: [
                   Things({
-                    things: store.things
+                    things: store.things, 
+                    color: store.bwMode ? '#535355' : "#9a158f"
                   })
                 ],
                 rightPart: [
@@ -83,20 +85,23 @@ export const main = b.createComponent({
                     children: [
                       Header({
                         text: store.header,
-                        fontSize : window.innerWidth > 650 ? "1.2em" : `${window.innerWidth * (1.2/655)}em`
+                        fontSize : window.innerWidth > 650 ? "1.2em" : `${window.innerWidth * (1.2/655)}em`,
+                        color: store.bwMode ? "#2d2d30" : '#5a2591'
                       }),
                       Content({
                         text: store.content,
-                        fontSize : window.innerWidth > 650 ? "0.9em" : `${window.innerWidth * (0.9/655)}em`
+                        fontSize : window.innerWidth > 650 ? "0.9em" : `${window.innerWidth * (0.9/655)}em`,
+                        color: store.bwMode ? '#535355' : "#9a158f"
                       }),
                       Footer({
                         text: store.footer,
-                        fontSize : window.innerWidth > 650 ? "1em" : `${window.innerWidth * (0.95/655)}em`
+                        fontSize : window.innerWidth > 650 ? "1em" : `${window.innerWidth * (0.95/655)}em`,
+                        color: store.bwMode ? '#535355' : "#9a158f"
                       }),
                       {
                         tag : "img",
                         attrs: {
-                          src: b.asset('./assets/SKAUT_Logo.svg') ,
+                          src: store.bwMode ? b.asset('./assets/SKAUT_Logobw.svg') : b.asset('./assets/SKAUT_Logo.svg') ,
                         },
                         style: {
                           height: '15%',

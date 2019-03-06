@@ -3,6 +3,7 @@ import { thing } from "../store";
 
 export interface IThings {
   things: thing[];
+  color? : string;
 }
 
 interface IThingsCtx extends b.IBobrilCtx {
@@ -29,7 +30,7 @@ export const Things = b.createComponent<IThings>({
             style: {
               maxWidth: "50%",
               display: "flex",
-              color: '#9a158f'
+              color: ctx.data.color? ctx.data.color : '#9a158f'
             }
           };
         })

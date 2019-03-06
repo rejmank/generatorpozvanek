@@ -1,5 +1,6 @@
 import * as b from "bobril";
 import Header from './Header';
+import { store } from '../store';
 
 export interface IShapeData {
   headerText: string,
@@ -21,7 +22,7 @@ export const Shape = b.createComponent<IShapeData>({
             Header({
               text: "Zabal si s sebou:",
               fontSize: '1.1rem',
-              color: 'rgb(90, 37, 145)'
+              color: store.bwMode ? "#2d2d30" : '#5a2591'
             })
           ],
           style : {
@@ -33,7 +34,7 @@ export const Shape = b.createComponent<IShapeData>({
         ctx.data.items.map(item => item)
       ],
       me.style = {
-        backgroundImage: `url(${b.asset("../assets/tvar.svg")})`,
+        backgroundImage: store.bwMode? `url(${b.asset("../assets/tvarbw.svg")})` :`url(${b.asset("../assets/tvar.svg")})`,
         backgroundSize: "contain",
         backgroundRepeat: "no-repeat",
         width: "45%",
