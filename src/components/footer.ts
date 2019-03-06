@@ -15,7 +15,6 @@ const Footer = b.createComponent<IFooter>({
     me.children = [ctx.data.text];
     me.style = {
       fontSize: ctx.data.fontSize ? ctx.data.fontSize : "1em",
-      paddingTop: "1rem",
       color: '#9a158f',
       fontStyle: 'italic'
     };

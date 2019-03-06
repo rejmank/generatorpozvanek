@@ -39,7 +39,7 @@ export const Things = b.createComponent<IThings>({
       display: "flex",
       flexDirection: "column",
       flexWrap: "wrap",
-      maxHeight: "68%",
+      maxHeight: "70%",
       justifyContent: "space-between",
       marginBottom: "1.25rem",
       marginLeft: "1rem",

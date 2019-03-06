@@ -36,8 +36,8 @@ export const Shape = b.createComponent<IShapeData>({
         backgroundSize: "contain",
         backgroundRepeat: "no-repeat",
         width: "45%",
-        padding: "1rem",
-        marginTop: '1rem'
+        padding: "1.3rem",
+        marginTop: '1.5rem'
       }
     }
 });

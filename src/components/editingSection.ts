@@ -24,9 +24,9 @@ const EditingSection = b.createComponent<IEditingSection>({
             }
         }]
         me.style = {
-            'display' : 'flex',
-            'margin' : '1rem',
-            'width' : '45rem',
+            display : 'flex',
+            margin : '1rem',
+            width : '45rem',
         }
     },
 });

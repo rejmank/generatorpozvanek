@@ -36,26 +36,27 @@ export const main = b.createComponent({
                 children: [
                   Header({
                     text: store.header,
-                    fontSize : window.innerWidth > 650 ? "1.1em" : `${window.innerWidth * (1.1/655)}em`
+                    fontSize : window.innerWidth > 650 ? "1.2em" : `${window.innerWidth * (1.2/655)}em`
                   }),
                   Content({
                     text: store.content,
-                    fontSize : window.innerWidth > 650 ? "0.7em" : `${window.innerWidth * (0.7/655)}em`
+                    fontSize : window.innerWidth > 650 ? "0.9em" : `${window.innerWidth * (0.9/655)}em`
                   }),
                   Footer({
                     text: store.footer,
-                    fontSize : window.innerWidth > 650 ? "1em" : `${window.innerWidth * (1/655)}em`
+                    fontSize : window.innerWidth > 650 ? "1em" : `${window.innerWidth * (0.95/655)}em`
                   }),
                   {
                     tag : "img",
                     attrs: {
-                      src: b.asset('./assets/SKAUT_logo.jpg') ,
+                      src: b.asset('./assets/SKAUT_Logo.svg') ,
                     },
                     style: {
-                      height: '80px',
+                      height: '15%',
                       position: 'absolute',
                       left: '0',
-                      bottom: '15px'
+                      bottom: '1.2rem',
+                      marginLeft: '1rem'
                     }
                   }
                 ]
@@ -78,26 +79,27 @@ export const main = b.createComponent({
                     children: [
                       Header({
                         text: store.header,
-                        fontSize : window.innerWidth > 650 ? "1.1em" : `${window.innerWidth * (1.1/655)}em`
+                        fontSize : window.innerWidth > 650 ? "1.2em" : `${window.innerWidth * (1.2/655)}em`
                       }),
                       Content({
                         text: store.content,
-                        fontSize : window.innerWidth > 650 ? "0.7em" : `${window.innerWidth * (0.7/655)}em`
+                        fontSize : window.innerWidth > 650 ? "0.9em" : `${window.innerWidth * (0.9/655)}em`
                       }),
                       Footer({
                         text: store.footer,
-                        fontSize : window.innerWidth > 650 ? "1em" : `${window.innerWidth * (1/655)}em`
+                        fontSize : window.innerWidth > 650 ? "1em" : `${window.innerWidth * (0.95/655)}em`
                       }),
                       {
                         tag : "img",
                         attrs: {
-                          src: b.asset('./assets/SKAUT_logo.jpg') ,
+                          src: b.asset('./assets/SKAUT_Logo.svg') ,
                         },
                         style: {
-                          height: '80px',
+                          height: '15%',
                           position: 'absolute',
                           left: '0',
-                          bottom: '15px'
+                          bottom: '1.2rem',
+                          marginLeft: '1rem'
                         }
                       }
                     ]

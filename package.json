@@ -5,7 +5,6 @@
     "main": "src/index.ts",
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1",
-        "predeploy": "bb b",
         "deploy": "gh-pages -d dist"
     },
     "typescript": {

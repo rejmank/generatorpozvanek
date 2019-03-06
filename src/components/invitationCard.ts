@@ -20,7 +20,6 @@ export const InvitationCard = b.createComponent<IInvitationCardData>({
             ctx.data.rightPart.map(item => {
               return { tag: "div", children: [item] , style: {
                 paddingLeft: '1rem',
-                paddingRight: '2.5rem',
                 height: '100%',
                 position: 'relative'
               }};
@@ -28,7 +27,9 @@ export const InvitationCard = b.createComponent<IInvitationCardData>({
           ],
           style: {
             width: "40%",
-            margin: "1rem"
+            marginTop: "2rem",
+            marginLeft: "1rem",
+            marginRight: "1rem"
           }
         },
 
@@ -42,11 +43,14 @@ export const InvitationCard = b.createComponent<IInvitationCardData>({
         boxShadow: "1px 1px 10px",
         height:
           window.innerWidth > 650
-            ? "452px"
-            : window.innerWidth * (452 / 640) + "px",
+            ? "480px"
+            : window.innerWidth * (480 / 640) + "px",
         width:
           window.innerWidth > 640 ? "640px" : window.innerWidth - 10 + "px",
-        padding: "1rem",
+        paddingTop: "1rem",
+        paddingLeft: "1rem",
+        paddingRight: "1rem",
+        paddingBottom: "0.7rem",
         backgroundColor: ""
       }),
       (me.attrs = {
